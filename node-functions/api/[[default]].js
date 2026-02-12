@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
     message: '智能祝福文案生成器 API',
     version: '1.0.0',
     endpoints: {
-      generate: 'POST /api/blessings/generate'
+      generate: 'POST /blessings/generate'
     }
   })
 })
