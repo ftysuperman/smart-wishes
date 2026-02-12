@@ -3,6 +3,6 @@ import { generateBlessing } from '../controllers/blessingController.js'
 
 const router = express.Router()
 
-router.post('/generate', generateBlessing)
+router.get('/generate', generateBlessing)
 
 export default router

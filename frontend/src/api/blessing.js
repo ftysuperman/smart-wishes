@@ -28,7 +28,7 @@ api.interceptors.response.use(
 )
 
 export const generateBlessing = async (data) => {
-  return await api.post('/blessings/generate', data)
+  return await api.get('/blessings/generate', { params: data })
 }
 
 export default {

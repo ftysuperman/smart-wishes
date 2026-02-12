@@ -2,7 +2,7 @@ import { generateBlessingText } from '../services/aiService.js'
 
 export const generateBlessing = async (req, res) => {
   try {
-    const { target, keywords } = req.body
+    const { target, keywords } = req.query
 
     if (!target || target.trim() === '') {
       return res.status(400).json({

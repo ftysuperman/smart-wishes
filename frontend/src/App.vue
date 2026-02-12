@@ -125,12 +125,9 @@ const handleGenerate = async (data) => {
   blessing.value = ''
   
   try {
-    const response = await fetch('/api/blessings/generate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
+    const params = new URLSearchParams(data)
+    const response = await fetch(`/api/blessings/generate?${params}`, {
+      method: 'GET'
     }).catch(error => {
       if (error.response?.status === 405) {
         console.error('方法不允许，请检查服务端路由配置');
