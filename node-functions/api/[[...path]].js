@@ -1,29 +1,68 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import blessingRoutes from '../routes/blessing.js'
+import { generateBlessingText } from '../services/aiService.js'
 
 dotenv.config()
-const app = express()
 
-app.use(cors())
-app.use(express.json())
+export default async function handler(req, res) {
+  const app = express()
+  
+  app.use(cors())
+  app.use(express.json())
+  
+  app.post('/blessings/generate', async (req, res) => {
+    try {
+      const { target, keywords } = req.body
 
-// 路由定义 - 处理 /api/blessings/generate
-app.use('/blessings', blessingRoutes)
+      if (!target || target.trim() === '') {
+        return res.status(400).json({
+          success: false,
+          error: '祝福对象不能为空'
+        })
+      }
 
-app.get('/', (req, res) => {
-  res.json({
-    message: '智能祝福文案生成器 API',
-    version: '1.0.0',
-    endpoints: {
-      generate: 'POST /api/blessings/generate'
+      res.setHeader('Content-Type', 'text/event-stream')
+      res.setHeader('Cache-Control', 'no-cache')
+      res.setHeader('Connection', 'keep-alive')
+
+      const sendEvent = (type, data) => {
+        res.write(`event: ${type}\n`)
+        res.write(`data: ${JSON.stringify(data)}\n\n`)
+      }
+
+      sendEvent('start', { message: '开始生成祝福语...' })
+
+      let fullText = ''
+      
+      try {
+        await generateBlessingText(target, keywords, (chunk) => {
+          fullText += chunk
+          sendEvent('chunk', { content: chunk })
+        })
+
+        sendEvent('complete', {
+          blessing: fullText,
+          target: target.trim(),
+          keywords: keywords?.trim() || ''
+        })
+      } catch (error) {
+        sendEvent('error', { error: error.message || '生成失败' })
+      }
+
+      res.end()
+    } catch (error) {
+      console.error('生成祝福失败:', error)
+      res.status(500).json({
+        success: false,
+        error: error.message || '生成祝福失败，请重试'
+      })
     }
   })
-})
+  
+  app.use((req, res) => {
+    res.status(404).json({ error: 'Not found' })
+  })
 
-// 导出处理函数
-export default async function handler(req, res) {
-  console.log('Request received:', req.method, req.url)
   return app(req, res)
 }
