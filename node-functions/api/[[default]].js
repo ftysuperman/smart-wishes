@@ -10,14 +10,14 @@ app.use(cors())
 app.use(express.json())
 
 // 路由定义
-app.use('/api/blessings', blessingRoutes)
+app.use('/blessings', blessingRoutes)
 
 app.get('/', (req, res) => {
   res.json({
     message: '智能祝福文案生成器 API',
     version: '1.0.0',
     endpoints: {
-      generate: 'POST /api/blessings/generate'
+      generate: 'POST /blessings/generate'
     }
   })
 })
