@@ -1,13 +1,19 @@
 import express from 'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
-import blessingRoutes from '../routes/blessing.js'
+import blessingRoutes from './routes/blessing.js'
 
 dotenv.config()
 const app = express()
 
 app.use(cors())
 app.use(express.json())
+
+// 添加请求日志中间件
+app.use((req, res, next) => {
+  console.log(`收到请求: ${req.method} ${req.path} (完整URL: ${req.url})`)
+  next()
+})
 
 // 路由定义
 app.use('/blessings', blessingRoutes)
