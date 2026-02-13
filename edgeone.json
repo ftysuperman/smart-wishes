@@ -11,12 +11,6 @@
       "openai"
     ]
   },
-  "routes": [
-    {
-      "path": "/api/*",
-      "function": "api"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/*",
