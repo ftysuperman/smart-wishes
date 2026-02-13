@@ -79,20 +79,20 @@
     </div>
 
     <!-- 祝福语内容 -->
-    <div class="bg-paper-white/90 backdrop-blur-md rounded-2xl p-8 shadow-lg relative border border-gold-foil/20">
+    <div class="bg-paper-white/90 backdrop-blur-md rounded-2xl p-4 sm:p-6 md:p-8 shadow-lg relative border border-gold-foil/20">
       <!-- 装饰性引号 -->
-      <div class="absolute top-6 left-5 text-7xl text-gold-foil/8 font-serif-display leading-none select-none">"</div>
-      <div class="absolute bottom-6 right-5 text-7xl text-gold-foil/8 font-serif-display leading-none select-none">"</div>
+      <div class="absolute top-4 sm:top-6 left-3 sm:left-5 text-5xl sm:text-7xl text-gold-foil/8 font-serif-display leading-none select-none">"</div>
+      <div class="absolute bottom-4 sm:bottom-6 right-3 sm:right-5 text-5xl sm:text-7xl text-gold-foil/8 font-serif-display leading-none select-none">"</div>
       
       <!-- 装饰性背景文字 -->
       <div class="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-        <span class="text-[120px] text-gold-foil/5 font-serif-display font-bold select-none">福</span>
+        <span class="text-[80px] sm:text-[100px] md:text-[120px] text-gold-foil/5 font-serif-display font-bold select-none">福</span>
       </div>
       
       <!-- 内容 -->
-      <p class="text-gray-800 leading-loose text-base sm:text-lg md:text-xl font-sans-body whitespace-pre-wrap relative z-10 pl-6 pr-6 py-4 font-medium">
+      <p class="text-gray-800 leading-relaxed sm:leading-loose text-sm sm:text-base md:text-lg font-sans-body whitespace-pre-wrap relative z-10 pl-2 pr-2 py-3 font-medium">
         {{ blessing }}
-        <span v-if="loading" class="inline-block w-3 h-5 bg-chinese-red ml-2 animate-pulse rounded-sm"></span>
+        <span v-if="loading" class="inline-block w-3 h-4 bg-chinese-red ml-2 animate-pulse rounded-sm"></span>
       </p>
     </div>
 

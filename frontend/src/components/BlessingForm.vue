@@ -17,7 +17,7 @@
           v-model="formData.target"
           type="text"
           required
-          placeholder="例如：张三、李四、家人、朋友"
+          placeholder="例如：小明、家人、朋友"
           class="input-elegant focus:border-chinese-red relative z-10 pr-12"
           :class="{ 'pr-20': formData.target }"
           :disabled="loading"
