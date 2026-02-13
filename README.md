@@ -29,11 +29,12 @@
 
 ### 2. 配置后端环境变量
 
-编辑 `backend/.env` 文件，填入你的 API Key：
+编辑 `backend/.env` 文件，填入你的 API Key和模型名称：
 
 ```env
 PORT=3000
 DASHSCOPE_API_KEY=sk-你的_API_密钥
+MODEL_NAME=qwen-max
 ```
 
 ### 3. 安装依赖
@@ -189,9 +190,9 @@ docker-compose down
 
 ### 后端环境变量 (.env)
 
-| 变量名 | 说明 | 示例 |
-|--------|------|------|
-| PORT | 服务器端口 | 3000 |
+| 变量名            | 说明               | 示例                |
+| ----------------- | ------------------ | ------------------- |
+| PORT              | 服务器端口         | 3000                |
 | DASHSCOPE_API_KEY | 阿里云百炼 API Key | sk-xxxxxxxxxxxxxxxx |
 
 ### 前端配置 (vite.config.js)
