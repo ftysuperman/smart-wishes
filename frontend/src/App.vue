@@ -89,15 +89,6 @@
       </div>
     </div>
 
-    <!-- 底部祝福语 -->
-    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center px-4">
-      <div class="inline-flex items-center px-5 py-2 bg-ivory-white/80 backdrop-blur-md rounded-full shadow-lg border border-gold-foil/20">
-        <span class="text-gold-foil text-lg mr-2">✨</span>
-        <span class="text-gray-700 font-sans-body text-sm tracking-wide">马年大吉，万事如意</span>
-        <span class="text-gold-foil text-lg ml-2">✨</span>
-      </div>
-    </div>
-
     <!-- 右下角装饰 -->
     <div class="absolute bottom-8 right-8 opacity-6 animate-float" style="animation-delay: 2s;">
       <div class="flex flex-col gap-1 items-center">

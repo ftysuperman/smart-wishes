@@ -57,7 +57,7 @@
           id="keywords"
           v-model="formData.keywords"
           type="text"
-          placeholder="例如：新年快乐、身体健康、工作顺利"
+          placeholder="例如：新年快乐、身体健康"
           class="input-elegant focus:border-royal-gold relative z-10 pr-12"
           :class="{ 'pr-20': formData.keywords }"
           :disabled="loading"
