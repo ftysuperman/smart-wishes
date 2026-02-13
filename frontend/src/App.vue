@@ -90,11 +90,11 @@
     </div>
 
     <!-- 底部祝福语 -->
-    <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-center">
-      <div class="inline-flex items-center px-8 py-3 bg-ivory-white/80 backdrop-blur-md rounded-full shadow-lg border border-gold-foil/20">
-        <span class="text-gold-foil text-xl mr-3">✨</span>
-        <span class="text-gray-700 font-sans-body text-base tracking-wide">愿您马年大吉，万事如意</span>
-        <span class="text-gold-foil text-xl ml-3">✨</span>
+    <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-center px-4">
+      <div class="inline-flex items-center px-5 py-2 bg-ivory-white/80 backdrop-blur-md rounded-full shadow-lg border border-gold-foil/20">
+        <span class="text-gold-foil text-lg mr-2">✨</span>
+        <span class="text-gray-700 font-sans-body text-sm tracking-wide">马年大吉，万事如意</span>
+        <span class="text-gold-foil text-lg ml-2">✨</span>
       </div>
     </div>
 

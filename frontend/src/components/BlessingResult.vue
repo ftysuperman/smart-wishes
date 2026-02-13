@@ -90,22 +90,22 @@
       </div>
       
       <!-- 内容 -->
-      <p class="text-gray-800 leading-loose text-xl sm:text-2xl font-sans-body whitespace-pre-wrap relative z-10 pl-8 pr-8 py-4 font-medium">
+      <p class="text-gray-800 leading-loose text-base sm:text-lg md:text-xl font-sans-body whitespace-pre-wrap relative z-10 pl-6 pr-6 py-4 font-medium">
         {{ blessing }}
-        <span v-if="loading" class="inline-block w-3 h-7 bg-chinese-red ml-2 animate-pulse rounded-sm"></span>
+        <span v-if="loading" class="inline-block w-3 h-5 bg-chinese-red ml-2 animate-pulse rounded-sm"></span>
       </p>
     </div>
 
     <!-- 底部装饰和操作 -->
     <div v-if="!loading" class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10">
       <!-- 装饰性文字 -->
-      <div class="flex items-center flex-wrap gap-x-3 text-sm text-gray-600">
+      <div class="flex items-center flex-wrap justify-center sm:justify-start gap-x-2 text-xs text-gray-600">
         <span class="text-gold-foil">✦</span>
-        <span class="font-sans-body">马年到，鸿运来</span>
+        <span class="font-sans-body">马年到</span>
+        <span class="text-gold-foil">✦</span>
+        <span class="font-sans-body">鸿运来</span>
         <span class="text-gold-foil">✦</span>
         <span class="font-sans-body">福气满满</span>
-        <span class="text-gold-foil">✦</span>
-        <span class="font-sans-body">万事如意</span>
         <span class="text-gold-foil">✦</span>
       </div>
 

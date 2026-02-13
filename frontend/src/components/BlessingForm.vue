@@ -81,11 +81,11 @@
       </div>
       
       <!-- 标签提示 -->
-      <div class="flex gap-2 mt-2">
+      <div class="flex gap-1.5 mt-2">
         <button
           type="button"
           @click="addKeyword('新年快乐')"
-          class="text-xs bg-paper-white border border-gold-foil/20 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200"
+          class="text-[11px] bg-paper-white border border-gold-foil/20 px-2 py-1 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200 whitespace-nowrap"
           :disabled="loading"
         >
           🎊 新年快乐
@@ -93,7 +93,7 @@
         <button
           type="button"
           @click="addKeyword('身体健康')"
-          class="text-xs bg-paper-white border border-gold-foil/20 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200"
+          class="text-[11px] bg-paper-white border border-gold-foil/20 px-2 py-1 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200 whitespace-nowrap"
           :disabled="loading"
         >
           💪 身体健康
@@ -101,7 +101,7 @@
         <button
           type="button"
           @click="addKeyword('工作顺利')"
-          class="text-xs bg-paper-white border border-gold-foil/20 px-3 py-1.5 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200"
+          class="text-[11px] bg-paper-white border border-gold-foil/20 px-2 py-1 rounded-lg text-gray-600 hover:bg-gold-foil/10 hover:text-gold-foil hover:border-gold-foil/40 transition-all duration-200 whitespace-nowrap"
           :disabled="loading"
         >
           🚀 工作顺利
